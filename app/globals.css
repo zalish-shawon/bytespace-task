@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+  Satoshi and Clash Display aren't on Google Fonts (they're from
+  fontshare.com), so they can't be loaded with next/font/google.
+
+  1. Download the font files from https://www.fontshare.com/fonts/satoshi
+     and https://www.fontshare.com/fonts/clash-display
+  2. Drop the .woff2 files into /public/fonts
+  3. Uncomment the @font-face blocks below (adjust filenames if different)
+  4. For best performance, switch to next/font/local in app/layout.tsx
+     instead of this @font-face approach — see README.md.
+
+  Until then, --font-satoshi and --font-clash fall back to the system
+  sans-serif stack below, so the site still renders correctly, just
+  with a substitute typeface.
+*/
+
+/*
+@font-face {
+  font-family: "Satoshi";
+  src: url("/fonts/Satoshi-Variable.woff2") format("woff2");
+  font-weight: 300 900;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Clash Display";
+  src: url("/fonts/ClashDisplay-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-display: swap;
+}
+*/
+
+:root {
+  --font-satoshi: "Satoshi", ui-sans-serif, system-ui, sans-serif;
+  --font-clash: "Clash Display", ui-sans-serif, system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: #040819;
+  background: #ffffff;
+}
